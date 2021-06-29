@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/netflixicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="header-sub display-flex">
+            <img src="/img/netflix.svg" alt="Simples Ideias">
+            <div class="nav-right">
+                <ul>
+                    <li class="select">
+                        <select>
+                            <option value="portuguese">Português</option>
+                            <option value="english">English</option>
+                        </select>
+                    </li>
+                    <li class="login"><a href="#2">Entrar</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+       <div class="submain">
+           <h1 class="title1">Filmes, séries e muito mais. Sem limites.</h1>
+           <h2 class="title2">Assista onde quiser. Cancele quando quiser.</h2>
+           <h3 class="title3">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
+           <form class="form" action="/action_page.php">
+                   <input required oninvalid="this.setCustomValidity('Preencha, por favor :(')" 
+                   onchange="try{setCustomValidity('')}catch(e){}"  class="email" type="email">
+                   <button class="button" type="submit" onclick="alert('Você será redirecionado')">
+                        <div class="letsgo">Vamos lá</div>
+                        <div class="arrow">&#5171;</div>
+                   </button>
+           </form>
+
+       </div>
+       
+       <div class="gradient"></div>
+    </main>
+        
+    <footer></footer>
+    
+</body>
+</html>
