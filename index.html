@@ -15,7 +15,7 @@
             <div class="nav-right">
                 <ul>
                     <li class="select">
-                        <select>
+                        <select class="selectLanguage">
                             <option value="portuguese">Português</option>
                             <option value="english">English</option>
                         </select>
@@ -45,6 +45,38 @@
     </main>
         
     <footer></footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const selectLanguage = document.querySelector(".selectLanguage");
+
+            const texts = {
+                portuguese: {
+                    title1: "Filmes, séries e muito mais. Sem limites.",
+                    title2: "Assista onde quiser. Cancele quando quiser.",
+                    title3: "Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.",
+                    button: "Vamos lá",
+                    login: "Entrar"
+                },
+                english: {
+                    title1: "Movies, series, and more. No limits.",
+                    title2: "Watch anywhere. Cancel anytime.",
+                    title3: "Ready to watch? Enter your email to create or restart your subscription.",
+                    button: "Let's go",
+                    login: "Login"
+                }
+            };
+
+            selectLanguage.addEventListener("change", function() {
+                const selectedLanguage = selectLanguage.value;
+
+                document.querySelector(".title1").innerText = texts[selectedLanguage].title1;
+                document.querySelector(".title2").innerText = texts[selectedLanguage].title2;
+                document.querySelector(".title3").innerText = texts[selectedLanguage].title3;
+                document.querySelector(".letsgo").innerText = texts[selectedLanguage].button;
+                document.querySelector(".login").innerText = texts[selectedLanguage].login;
+            });
+        });
+    </script>
     
 </body>
 </html>
